@@ -1,0 +1,721 @@
+:root {
+  --color-primary: #caf0f8;
+  --color-secondary: #48cae4;
+  --color-tertiary: #00b4d8;
+  --color-primary-darker: #118ab3;
+  --color-secondary-darker: #00b4d8;
+  --color-tertiary-darker: #0096c7;
+  --color-primary-opacity: #0077b6;
+  --color-secondary-opacity: #023e8a;
+  --color-tertiary-opacity: #03045e;
+  --gradient-primary: linear-gradient(to top left, #0077b6, #48cae4);
+  --gradient-secondary: linear-gradient(to top left, #0077b6, #00b4d8);
+}
+
+body {
+  font-family: "Didact Gothic";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.details {
+  text-align: right;
+  margin-top: -4rem;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .details {
+    text-align: center;
+    margin-top: 0rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+}
+
+/*GENERAL ELEMENTS*/
+.section {
+  padding: 15rem 3 rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s opacity 1s;
+}
+
+.section__title {
+  text-align: left;
+}
+
+.section__description {
+  font-size: 3vw;
+  font-style: oblique;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .section__description {
+    text-align: center;
+  }
+}
+
+.section__header {
+  font-size: 2.5vw;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.bg-img {
+  /* The image used*/
+  background-image: url("images/section1paintimage.jpg");
+  min-height: 213px;
+
+  /* Center and scale the image nicely */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Needed to position the navbar*/
+  position: relative;
+}
+
+/* Position the navbar container inside the image*/
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The Navbar */
+.topnav {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Navbar links */
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.topnav a:hover {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .bg-img {
+    min-height: 320px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: inherit;
+    top: 0;
+    right: -6px;
+    transition: 2s;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    height: 3rem;
+  }
+}
+
+.section0header {
+  font-size: 6vw;
+  text-transform: uppercase;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: left;
+  color: var(--color-tertiary-opacity);
+  margin: 0;
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 768px) {
+  .section0header {
+    text-align: center;
+    font-size: 8vw;
+  }
+}
+
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 3vw;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--color-secondary);
+  border-style: none;
+  border-color: #ddd;
+  border-bottom: 1ps solid currentColor;
+  padding-bottom: 4rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+h4 {
+  font-size: 3vw;
+  font-weight: 500;
+  margin: 1rem;
+}
+
+.features__img {
+  width: 40%;
+  height: auto;
+  float: left;
+  padding: 0.5%;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .features__img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.features__header {
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.charcoal-icon {
+  width: 5%;
+  border-radius: 10rem;
+  padding-bottom: 0;
+  margin-top: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .charcoal-icon {
+    margin-top: 1rem;
+  }
+}
+
+.features__img2 {
+  width: 40%;
+  float: right;
+  padding-right: 8rem;
+  margin-bottom: 1rem;
+  margin-top: -17rem;
+}
+
+.bamboo-icon {
+  width: 5%;
+  border-radius: 10rem;
+  padding-bottom: 0;
+  margin-top: 15rem;
+  display: block;
+}
+
+.bamboop {
+  margin-bottom: 1rem;
+  padding-top: 1%;
+  float: left;
+  width: 55%;
+}
+
+@media screen and (max-width: 768px) {
+  .bamboo-icon {
+    width: 5%;
+    border-radius: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .features__img2 {
+    width: 100%;
+    height: 50%;
+    margin-top: 0.5rem;
+  }
+
+  .bamboop {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
+
+.paint-icon {
+  width: 10%;
+  border-radius: 10rem;
+  padding-bottom: 0;
+  margin-top: 15rem;
+}
+
+.features__img3 {
+  width: 40%;
+  height: auto;
+  float: left;
+  padding: 0.5%;
+  margin-top: 4rem;
+}
+
+.ppainting {
+  margin-bottom: 22rem;
+}
+
+@media screen and (max-width: 768px) {
+  .paint-icon {
+    margin-top: 1rem;
+    width: 20%;
+  }
+
+  .features__img3 {
+    width: 100%;
+    height: 50%;
+    margin-top: 0.5rem;
+  }
+
+  .ppainting {
+    margin-bottom: 2rem;
+  }
+}
+
+/*UPDATES*/
+.updates {
+  max-width: 100%;
+  background-color: rgb(222, 225, 253);
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.updates__tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.updates__tab {
+  transform: translateY(-120%);
+  background-color: var(--color-secondary-darker);
+  border-radius: 10rem;
+  font-size: medium;
+  cursor: pointer;
+  font-family: inherit;
+  border-style: hidden;
+  width: -moz-available;
+}
+
+.eventposta {
+  width: 24%;
+  margin-left: 28rem;
+  margin-top: -9rem;
+}
+
+.updates__tab--1:hover,
+.updates__tab--2:hover {
+  color: white;
+  font-weight: 600;
+  transition: all 0.9s ease 0.5s;
+  transform: translate(-1px);
+}
+
+.updates__tab--active {
+  transform: translateY(-80%);
+}
+
+.event2-icon {
+  width: 5%;
+}
+
+.updates__content {
+  display: none;
+  font-size: 1.3rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+  padding-bottom: 3rem;
+}
+
+.updates__content--active {
+  display: contents;
+}
+
+@media screen and (max-width: 600px) {
+  .eventposta {
+    width: 28%;
+    margin-left: 10rem;
+    margin-top: -12rem;
+    margin-bottom: 7.5rem;
+  }
+
+  .updates__tab {
+    transform: translateY(-120%);
+    background-color: var(--color-secondary-darker);
+    border-radius: 10rem;
+    font-size: small;
+  }
+
+  .event2p {
+    font-size: 1rem;
+  }
+}
+
+/* THE GALLERY SECTION*/
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.slidecontainer {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: var(--color-secondary);
+  -webkit-user-select: none;
+}
+
+@media screen and (max-width: 700px) {
+  .prev,
+  .next {
+    background-color: rgb(0, 0, 0);
+    font-size: 1rem;
+  }
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: hotpink;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.slide {
+  width: 36%;
+  margin-left: 25rem;
+}
+
+@media screen and (max-width: 700px) {
+  .slide {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-tertiary);
+  font-size: larger;
+  font-family: inherit;
+  font-weight: 700;
+  border: none;
+  padding: 1rem 4.2rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-left: 34rem;
+}
+
+.btn:hover {
+  color: white;
+  background-color: var(--color-primary-darker);
+  transition: 1s ease all;
+  transform: translateY(-5px);
+}
+
+@media screen and (max-width: 700px) {
+  .btn {
+    font-size: larger;
+    padding: 1rem 1.2rem;
+    margin-left: 7rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* FOOTER */
+.footer {
+  padding: 10%;
+  background-color: #37383d;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer__link {
+  font-size: 1.1rem;
+  color: #1d6cff;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  color: white;
+  transition: 0.5s;
+}
+
+.footer__logo {
+  margin-bottom: 1rem;
+  width: 25%;
+}
+
+/* MODAL WINDOW */
+.modal {
+  position: fixed;
+  top: 51%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  height: 85%;
+  width: 50%;
+  z-index: 1000;
+  background: rgb(0, 0, 0);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.modal__header {
+  font-size: 2rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+  color: white;
+}
+.modal__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn--close-modal {
+  font-family: inherit;
+  color: white;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 1;
+}
+.modal__form.line {
+  color: #f7efef;
+  /* Sets the text color */
+  font-size: 18px;
+  /* Sets the font size */
+  font-family: Arial, sans-serif;
+  /* Sets the font family */
+}
+.modal__form.a {
+  color: #000000;
+  /* Sets the text color */
+  font-size: 16px;
+  /* Sets the font size */
+  font-family: Arial, sans-serif;
+  /* Sets the font family */
+  text-decoration: none;
+  /* Removes the default underline from the link */
+}
+.modal__form.a:hover {
+  color: #0000ff;
+  /* Changes the text color on hover */
+  text-decoration: underline;
+  /* Adds an underline on hover */
+}
+.ulModal {
+  position: relative;
+  display: flex;
+}
+
+.ulModal .liModal {
+  position: relative;
+  list-style: none;
+  margin: 3rem;
+  cursor: pointer;
+  width: 17%;
+}
+
+.ulModal .liModal a {
+  text-decoration: none;
+}
+
+.ulModal .liModal a .fa-brands {
+  font-size: 950%;
+  color: #222;
+}
+
+.ulModal .liModal a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  font-size: 6em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.ulModal .liModal:nth-child(3) a::before {
+  content: "\f16d";
+  background-image: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background-clip: text;
+  color: transparent;
+  border-bottom: 4px solid #dc2743;
+}
+
+.ulModal .liModal:nth-child(2) a::before {
+  content: "\f232";
+  color: #25d366;
+  border-bottom: 4px solid #25d366;
+}
+
+.ulModal .liModal:nth-child(1) a::before {
+  content: "\f099";
+  color: #1da1f2;
+  border-bottom: 4px solid #1da1f2;
+}
+
+.ulModal .liModal:hover a::before {
+  height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    width: 90%;
+    height: 59%;
+    position: fixed;
+  }
+
+  .ulModal .liModal a::before {
+    overflow: visible;
+    height: 50%;
+  }
+
+  .ulModal .liModal a::before {
+    font-size: 3.5em;
+  }
+
+  .ulModal .liModal a .fa-brands {
+    font-size: 670%;
+    color: #222;
+  }
+
+  .ulModal .liModal {
+    margin: 1rem;
+  }
+}
