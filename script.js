@@ -14,14 +14,14 @@ const nav = document.querySelector(".nav");
 
 /////////Making the navigation responsive
 
-function myFunction() {
+const resNavbar = function () {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
   }
-}
+};
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// Modal window
 

@@ -649,7 +649,7 @@ img {
 
 .ulModal .liModal a .fa-brands {
   font-size: 950%;
-  color: #222;
+  color: #000000;
 }
 
 .ulModal .liModal a::before {
@@ -711,8 +711,7 @@ img {
   }
 
   .ulModal .liModal a .fa-brands {
-    font-size: 670%;
-    color: #222;
+    font-size: 568%;
   }
 
   .ulModal .liModal {
